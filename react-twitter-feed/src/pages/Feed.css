@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+.main-container {
+    border-radius: 10px;
+    border: 1px solid #acacac;
+}
+
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}

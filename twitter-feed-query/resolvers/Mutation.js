@@ -33,8 +33,8 @@ exports.Mutation = {
     const idInt = id.slice(5);
     console.log(idInt);
     console.log(id);
-    db.tweets = db.tweets.filter((tweet) => tweet.id !== "tweet4");
-    db.stats = db.stats.filter((stat) => stat.id !== "stat" + 4);
+    db.tweets = db.tweets.filter((tweet) => tweet.id !== id);
+    db.stats = db.stats.filter((stat) => stat.id !== "stat" + idInt);
     console.log(db.tweets, db.stats);
     return deletedTweet;
   },
