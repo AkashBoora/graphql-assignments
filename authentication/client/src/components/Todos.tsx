@@ -1,6 +1,7 @@
 import { gql, useLazyQuery } from "@apollo/client";
 import { Button, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
+import Login from "./Login";
 
 const GET_TODOS = gql`
   query {
@@ -29,8 +30,8 @@ export default function Todos(props: Props) {
   if(loading){
     return <Typography>Loading</Typography>
   }
-  if(error){
-    return <Typography>Something Went Wrong</Typography>
+  if(error?.graphQLErrors[0].extensions.code){
+    return <Login setToken={props.setToken}/>
   }
   return (
     <div>
