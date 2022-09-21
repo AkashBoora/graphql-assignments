@@ -16,7 +16,7 @@ export default function Login(props: Props) {
   const [name, setName] = useState<String>("");
   const [password, setPassword] = useState<String>("");
 
-  const [getlogin, { error,loading, data }] = useLazyQuery(GET_LOGIN, {
+  const [getlogin, { error, data }] = useLazyQuery(GET_LOGIN, {
     variables: { name, password },
   });
 
@@ -31,7 +31,6 @@ export default function Login(props: Props) {
   return (
     <div>
       <Grid container direction={"column"} gap={"20px"}>
-        {loading && <Typography >Loading</Typography>}
         {error ? <Typography color="error">Invalid Credentials</Typography> : <Typography >Please Login</Typography>}
         <Grid container gap={"10px"}>
           <Input
