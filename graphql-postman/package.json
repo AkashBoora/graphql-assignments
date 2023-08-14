@@ -1,0 +1,23 @@
+{
+  "name": "graphql-postman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.10.2",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "graphql": "^16.6.0",
+    "guid": "^0.0.12",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.1.4",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.20"
+  }
+}
